@@ -1,0 +1,158 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">  <!-- Bootstrap.com готовые css, иконки и тд-->
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="main_page">
+        <img class="IMAGE_PNG" alt="My Image" src="{% static 'main/img/sticker.png' %}" />
+        <!--++++++++++++++++++++++++++++ Main header ++++++++++++++++++++++++++++-->
+        <div class="wrapper-main">
+            <nav>
+                <ul>
+                    <li> <a href="#life">Фотогалерея</a> </li>
+                    <li> <a href="#plan">Наш день</a> </li>
+                    <li> <a href="#dresscode">Дресс-код</a> </li>
+                    <li> <a href="#invitation">Приглашение</a> </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--++++++++++++++++++++++++++++ Main background loop photos and invitation +++++++++++++++++++++++++++++++-->
+        <div class="wrapper_invitation">
+            <div class="loop-animation"></div>
+
+            <div class="content">
+                <div class="box">
+                    <i onclick="audio.play()" class="fas fa-play"></i>
+                </div>
+                <h1 class="title_page">Кирилл и Софья</h1>
+                <h4 class="inplace_edit">Приглашаем на нашу свадьбу!</h4>
+                <hr/>
+                <h4 class="inplace_edit">19 июля 2023</h4>
+            </div>
+        </div>
+
+        <!------------------------------------ SCROLLER ------------------------------------------------------------>
+        <div id="life" class="scroller-part">
+            <h1 class="photo-content">Фотогалерея</h1>
+
+            <div class="scroller-container">
+                <div>
+                    <button class="icon" onclick="scrolll()"> <i class="fas fa-angle-double-left"></i> </button>
+                </div>
+
+                <div class="wrapper">
+                    <div class="scroll-images">
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_7870-2.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_7940.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8036.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8052-2.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8088.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8119.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8237-2.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8262.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8345.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8486-2.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8522.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8878.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8733-2.jpg' %}" alt=""> </div>
+                        <div class="child"> <img class="child-img" src="{% static 'main/img/IMG_8572.jpg' %}" alt=""> </div>
+                    </div>
+
+                    <div class="popup-image">
+                        <span>&times;</span>
+                        <img src="{% static 'main/img/IMG_7870-2.jpg' %}" alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <button class="icon" onclick="scrollr()"> <i class="fas fa-angle-double-right"></i> </button>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------------------------- Plan ----------------------------------------------------->
+        <div id="plan" class="plan-part">
+            <h1>План свадебного дня</h1>
+            <div class="map">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9ba3407b071f3af70853abb86c0eaa7fdc640c3254b8d74c299f08e190137aa3&amp;source=constructor" width="724" height="447" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <!---------------------------------------------- Dress-code -------------------------------------------------->
+        <div id="dresscode" class="container-dresscode">
+            <h1>Дресс-код</h1>
+            <p> Уважаемые гости, мы будем вам очень признательны, если в своём наряде Вы выберете эти оттенки. </p>
+            <div class="color_bar">
+                <div class="color-box color-box-circle" style="background-color:#13333E;"></div>
+                <div class="color-box color-box-circle" style="background-color:#2B424A;"></div>
+                <div class="color-box color-box-circle" style="background-color:#455768;"></div>
+                <div class="color-box color-box-circle" style="background-color:#a3b0da;"></div>
+                <div class="color-box color-box-circle" style="background-color:#d7cce4;"></div>
+                <div class="color-box color-box-circle" style="background-color:#f9e3dc;"></div>
+            </div>
+        </div>
+
+        <!-------------------------------------------- Invitation -------------------------------------------------->
+        <div id="invitation" class="invitation">
+            <h1>Приглашение</h1>
+            <div class="paper">
+                <img class="invite-img" src="{% static 'main/img/paper.jpg' %}" alt="" height="340px" width="1000px">
+                <div class="content">
+                   <h4>Бывают события неповторимые и незабываемые,</h4>
+                   <h4>которые немыслимы без присутствия рядом близких нам людей,</h4>
+                   <h4>поэтому с огромным удовольствием приглашаем Вас </h4>
+                   <h4>разделить с нами этот волнующий праздник.</h4>
+                   <h4>Будем очень рады видеть Вас!</h4>
+                </div>
+            </div>
+            <div class="ddd"><img src="{% static 'main/img/IMG_8933.jpg' %}" alt="" height="450px" width="auto"></div>
+            <div class="phrase">
+                <h4>"Любить — это находить в счастье другого свое собственное счастье."</h4>
+                <h3>Готфрид Вильгельм Лейбниц</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    const audio = new Audio();
+    audio.src = "{% static 'main/music.mp3' %}"
+</script>
+
+<script>
+    function scrolll() {
+        var left = document.querySelector(".scroll-images")
+        left.scrollBy(-350,0)
+    }
+
+    function scrollr() {
+        var right = document.querySelector(".scroll-images")
+        right.scrollBy(350,0)
+    }
+</script>
+
+<script>
+document.querySelectorAll('.wrapper img').forEach(image => {
+    image.onclick = () => {
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute("src");
+    }
+});
+
+document.querySelector('.popup-image span').onclick = () => {
+    document.querySelector('.popup-image').style.display = 'none';
+};
+</script>

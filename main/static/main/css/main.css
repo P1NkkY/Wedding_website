@@ -1,0 +1,450 @@
+.main_page{
+    background-image:url("../img/IMG_1.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+    overflow: hidden;
+    overflow-x: hidden;
+    height: 3920px;
+}
+
+.main_page .IMAGE_PNG {
+    position: absolute;
+    top: 1970px;
+    left: 57%;
+    height: 900px;
+    width: auto;
+}
+
+/* ++++++++++++++++++++++++++++++++ MAIN MENU ++++++++++++++++++++++++++++++++ */
+
+.wrapper-main {
+    box-sizing: border-box;
+}
+
+.wrapper-main nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-main nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    transition: transform .6s ease;
+}
+
+.wrapper-main nav ul li:hover {
+    transform: scale(1.1); /* При наведении будет увеличиваться текст на значение scale (в данном случае 5%) */
+}
+
+.wrapper-main nav ul li a {
+    color: #34312b;
+    text-decoration: none;
+    text-decoration: underline;
+    font-weight: 460;
+    font-size: 29px;
+    font-family: serif;
+}
+
+.wrapper-main nav ul li a:hover {
+    color: #ffffff; /* при выделении какой цвет будет выделен */
+}
+
+/*  ++++++++++++++++++++++++++++++++ Main background autoscroller + text ++++++++++++++++++++++++++++++++++++ */
+.wrapper_invitation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1200px;
+}
+
+.wrapper_invitation .loop-animation {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 5.8em;
+    animation: change-photo 25s infinite ease-in-out;
+    border-top: 0.6rem solid;
+    border-bottom: 0.6rem solid;
+    border-color: #ffffff;
+}
+
+@keyframes change-photo {
+    0%
+    {
+       background-image:url("../img/IMG_7997-2.jpg");
+    }
+    20%
+    {
+        background-image:url("../img/IMG_8733-2.jpg");
+    }
+    40%
+    {
+        background-image:url("../img/IMG_8317-2.jpg");
+    }
+    60%
+    {
+       background-image:url("../img/IMG_7997-2.jpg");
+    }
+    80%
+    {
+        background-image:url("../img/IMG_8733-2.jpg");
+    }
+    100%
+    {
+        background-image:url("../img/IMG_8317-2.jpg");
+    }
+}
+
+.content{
+    position: relative;
+    top: -225px;
+    left: 0;
+}
+
+.content .box{
+    position: relative;
+    left: 214px;
+    height: 70px;
+    background-color: #fffffb;
+    opacity: 0.6;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: -10px -10px 15px rgba(250, 246, 238, 0.4), 10px 10px 15px rgba(0, 0, 0, 1);
+}
+
+.content .box i {
+    position: relative;
+    left: 24px;
+    top: 20px;
+    font-size:30px;
+    color: #34312b;
+    text-shadow: 2px 0px 24px rgba(255, 255, 255, 0.7), 2px 0px 24px rgba(0, 0, 0, 0.7);
+}
+
+.content .title_page {
+    font-size: 4.5em;
+    color: #ffffff;
+    font-family: serif;
+    text-align: center;
+    margin-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content .inplace_edit {
+    font-size: 1.8em;
+    color: #ffffff;
+    font-family: serif;
+    text-align: center;
+    line-height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* __________________________________________ SCROLLER ________________________________________________ */
+.scroller-part {
+    position: relative;
+    top: -240px;
+}
+
+.scroller-part .photo-content {
+    text-align: center;
+    font-size: 2.7em;
+    color: #34312b;
+    font-family: serif;
+}
+
+.scroller-container {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center; /* относительно центра выравнивание по высоте */
+    justify-content: center;
+    border: 2px solid white;
+    margin-top: 15px;
+}
+
+.scroller-part .wrapper{
+    width: 90%;
+    height: 50%;
+    position: relative;
+}
+
+.wrapper::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 180px;
+    background-image: linear-gradient(90deg, white, transparent);
+}
+
+.wrapper::after{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 180px;
+    background-image: linear-gradient(-90deg, white, transparent);
+}
+
+.scroll-images{
+    border: 6px solid white;
+    width: 100%;
+    height: auto;
+    display: flex; /* перевернуть меню */
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+.child {
+    min-width: 350px;
+    height: auto;
+    margin: 1px 5px;
+    cursor: pointer;
+    border: 0px solid white;
+    overflow: hidden;
+}
+
+.child-img {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-images::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.wrapper .scroll-images .child img {
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.wrapper .scroll-images .child:hover img {
+    transform: scale(1.05);
+}
+
+.wrapper .popup-image {
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.wrapper .popup-image span {
+    position: absolute;
+    top:0;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.wrapper .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 37%;
+    object-fit: cover;
+}
+
+@media (max-width:768px) {
+    .wrapper .popup-image img {
+        width: 95%;
+    }
+}
+
+.icon {
+    color: #454139;
+    background-color: white;
+    font-size: 40px;
+    outline: none;
+    border: none;
+    padding: opx 20px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transition: transform .6s ease;
+    transform: scale(1.1);
+}
+
+/* ---------------------------------------------- PLAN --------------------------------------------------*/
+/* ---------------------------------------------- MAP --------------------------------------------------*/
+.plan-part {
+    position: relative;
+    margin-top: -40px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+.plan-part h1 {
+    font-family: serif;
+    text-align: center;
+    font-size: 2.7em;
+    color: #34312b;
+}
+
+.plan-part .map {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.plan-part .map iframe {
+    border: 0.3rem solid;
+    border-color: white;
+}
+/* ---------------------------------------------- DRESSCODE --------------------------------------------------*/
+.container-dresscode {
+    height: 470px;
+    position: relative;
+    top: 90px;
+    text-align: center;
+}
+
+.container-dresscode h1 {
+    font-family: serif;
+    text-align: center;
+    font-size: 2.7em;
+    color: #34312b;
+}
+
+.container-dresscode p {
+    font-family: serif;
+    font-size: 1.2em;
+    margin: 10px 6px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 140%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.color_bar {
+    text-align: center;
+}
+.color-box {
+    display: inline-block;
+    margin: 4px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #efefef;
+}
+.color-box-circle {
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------- INVITATION --------------------------------------------------*/
+.invitation {
+    align-items: center;
+    text-align: center;
+}
+
+.invitation h1 {
+    font-family: serif;
+    text-align: center;
+    font-size: 2.7em;
+    color: #34312b;
+}
+
+.paper {
+    top: 30px;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.paper img {
+    filter: blur(1.5rem);
+}
+
+.paper .content {
+    position; absolute;
+    width: 100%;
+    top: -320px;
+}
+
+.paper .content h4 {
+    font-family: serif;
+    text-align: center;
+    font-size: 1.7em;
+    color: #34312b;
+    font-style: italic;
+}
+
+.invite-img {
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+.ddd {
+    position: relative;
+    top: 70px;
+}
+
+.ddd img {
+    border: 4px solid white;
+}
+
+.phrase {
+    position: relative;
+    top: 110px;
+}
+
+.phrase h3 {
+    font-family: serif;
+    position: relative;
+    left: 500px;
+    font-size:  1.7em;
+    color: #34312b;
+    font-style: italic;
+}
+
+.phrase h4 {
+    font-family: serif;
+    text-align: center;
+    font-size: 1.7em;
+    color: #34312b;
+    font-style: italic;
+}
