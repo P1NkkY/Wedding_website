@@ -54,6 +54,18 @@
     font-family: serif;
 }
 
+/* Для ширины 1024 пикселей и меньше */
+@media screen and (max-width: 1024px) {
+    .wrapper-main nav ul li a {
+        color: #34312b;
+        text-decoration: none;
+        text-decoration: underline;
+        font-weight: 460;
+        font-size: 20px;
+        font-family: serif;
+    }
+}
+
 .wrapper-main nav ul li a:hover {
     color: #ffffff; /* при выделении какой цвет будет выделен */
 }
