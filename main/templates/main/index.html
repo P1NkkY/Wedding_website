@@ -16,17 +16,15 @@
 
 <body>
     <div class="main_page">
-        <img class="IMAGE_PNG" alt="My Image" src="{% static 'main/img/sticker.png' %}" />
+<!--        <img class="IMAGE_PNG" alt="My Image" src="{% static 'main/img/sticker.png' %}" />-->
         <!--++++++++++++++++++++++++++++ Main header ++++++++++++++++++++++++++++-->
         <div class="wrapper-main">
-            <nav>
                 <ul>
                     <li> <a href="#life">Фотогалерея</a> </li>
                     <li> <a href="#plan">Наш день</a> </li>
                     <li> <a href="#dresscode">Дресс-код</a> </li>
                     <li> <a href="#invitation">Приглашение</a> </li>
                 </ul>
-            </nav>
         </div>
 
         <!--++++++++++++++++++++++++++++ Main background loop photos and invitation +++++++++++++++++++++++++++++++-->
@@ -108,8 +106,8 @@
         <!-------------------------------------------- Invitation -------------------------------------------------->
         <div id="invitation" class="invitation">
             <h1>Приглашение</h1>
-            <div class="paper">
-                <img class="invite-img" src="{% static 'main/img/paper.jpg' %}" alt="" height="340px" width="1000px">
+
+            <div class="wrapper_inv">
                 <div class="content">
                    <h4>Бывают события неповторимые и незабываемые,</h4>
                    <h4>которые немыслимы без присутствия рядом близких нам людей,</h4>
@@ -117,12 +115,15 @@
                    <h4>разделить с нами этот волнующий праздник.</h4>
                    <h4>Будем очень рады видеть Вас!</h4>
                 </div>
+
+                <div class="ddd"><img src="{% static 'main/img/IMG_8933.jpg' %}" alt="" height="450px" width="auto"></div>
+
+                <div class="phrase">
+                    <h4>"Любить — это находить в счастье другого свое собственное счастье."<br>Готфрид Вильгельм Лейбниц</h4>
+                </div>
             </div>
-            <div class="ddd"><img src="{% static 'main/img/IMG_8933.jpg' %}" alt="" height="450px" width="auto"></div>
-            <div class="phrase">
-                <h4>"Любить — это находить в счастье другого свое собственное счастье."</h4>
-                <h3>Готфрид Вильгельм Лейбниц</h3>
-            </div>
+
+
         </div>
     </div>
 </body>
@@ -156,3 +157,5 @@ document.querySelector('.popup-image span').onclick = () => {
     document.querySelector('.popup-image').style.display = 'none';
 };
 </script>
+
+</html>
