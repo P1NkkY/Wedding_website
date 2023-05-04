@@ -2,13 +2,13 @@
 @media screen and (max-width: 414px) {
     .main_page{
         background-image:url("../img/IMG_1.jpg");
-        background-position: center center;
-        background-attachment: fixed;
+        background-position: right right;
+        background-attachment: scroll;
         background-repeat: repeat;
         background-size: cover;
         overflow: hidden;
         overflow-x: hidden;
-        height: auto;
+        height: 3560px;
         zoom: 1;
     }
 }
@@ -22,7 +22,7 @@
         background-size: cover;
         overflow: hidden;
         overflow-x: hidden;
-        height: auto;
+        height: 3680px;
         zoom: 1;
     }
 }
@@ -39,7 +39,6 @@
 /* Computer version 800px - 4000px ++ */
 @media screen and (min-width: 800px) {
     .wrapper-main {
-        background-color: green;
         width: 100%;
         height: 92px;
         text-align: center;
@@ -84,7 +83,6 @@
 /* Computer version (zooming) 682 - 800px ++ */
 @media screen and (max-width: 801px) {
     .wrapper-main {
-        background-color: green;
         width: 100%;
         height: 92px;
         text-align: center;
@@ -129,7 +127,6 @@
 /* Computer version (zooming) 414 - 682 ++ */
 @media screen and (max-width: 682px) {
     .wrapper-main {
-        background-color: green;
         width: 100%;
         height: 92px;
         text-align: center;
@@ -174,7 +171,6 @@
 /* Telephone version ++ */
 @media screen and (max-width: 414px) {
     .wrapper-main {
-        background-color: yellow;
         width: 100%;
         height: 92px;
         text-align: center;
@@ -219,9 +215,109 @@
 
 /*  ++++++++++++++++++++++++++++++++ Main background autoscroller + text ++++++++++++++++++++++++++++++++++++ */
 /* Full version ++ */
-@media screen and (min-width: 1px) {
+@media screen and (max-width: 414px) {
     .wrapper_invitation {
-        background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 900px;
+    }
+
+    .wrapper_invitation .loop-animation {
+        width: 100%;
+        height: 800px;
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 5.8em;
+        animation: change-photo 25s infinite ease-in-out;
+        border-top: 0.6rem solid;
+        border-bottom: 0.6rem solid;
+        border-color: #ffffff;
+    }
+
+    @keyframes change-photo {
+        0%
+        {
+           background-image:url("../img/IMG_7997-2.jpg");
+        }
+        20%
+        {
+            background-image:url("../img/IMG_8733-2.jpg");
+        }
+        40%
+        {
+            background-image:url("../img/IMG_8317-2.jpg");
+        }
+        60%
+        {
+           background-image:url("../img/IMG_7997-2.jpg");
+        }
+        80%
+        {
+            background-image:url("../img/IMG_8733-2.jpg");
+        }
+        100%
+        {
+            background-image:url("../img/IMG_8317-2.jpg");
+        }
+    }
+
+    .content{
+        position: relative;
+        top: -100px;
+        left: 0;
+    }
+
+    .content .box{
+        position: relative;
+        top: 10px;
+        margin: auto;
+        height: 70px;
+        background-color: #fffffb;
+        opacity: 0.6;
+        width: 70px;
+        border-radius: 50%;
+        box-shadow: -10px -10px 15px rgba(250, 246, 238, 0.4), 10px 10px 15px rgba(0, 0, 0, 1);
+    }
+
+    .content .box i {
+        position: relative;
+        left: 24px;
+        top: 20px;
+        font-size:30px;
+        color: #34312b;
+        text-shadow: 2px 0px 24px rgba(255, 255, 255, 0.7), 2px 0px 24px rgba(0, 0, 0, 0.7);
+    }
+
+    .content .title_page {
+        font-size: 3em;
+        color: #ffffff;
+        font-family: serif;
+        text-align: center;
+        margin-bottom: 20px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .content .inplace_edit {
+        font-size: 1.8em;
+        color: #ffffff;
+        font-family: serif;
+        text-align: center;
+        line-height: 100%;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-top: 1px solid #eee;
+    }
+}
+
+@media screen and (min-width: 415px) {
+    .wrapper_invitation {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -320,7 +416,6 @@
         border-top: 1px solid #eee;
     }
 }
-
 /* __________________________________________ SCROLLER ________________________________________________ */
 /* Computer version 800px - 4000px ++ */
 @media screen and (min-width: 800px) {
@@ -769,7 +864,7 @@
 
     .scroller-part .photo-content {
         text-align: center;
-        font-size: 2.7em;
+        font-size: 2.4em;
         color: #34312b;
         font-family: serif;
     }
@@ -920,7 +1015,7 @@
     .plan-part h1 {
         font-family: serif;
         text-align: center;
-        font-size: 2.7em;
+        font-size: 2.4em;
         color: #34312b;
     }
 
@@ -941,7 +1036,6 @@
 /* Computer version (zooming) 724px - 4400px ++ */
 @media screen and (min-width: 724px) {
     .plan-part {
-        background-color:green;
         position: relative;
         margin-top: 100px;
         box-sizing: border-box;
@@ -968,9 +1062,48 @@
 }
 /* ---------------------------------------------- DRESSCODE --------------------------------------------------*/
 /* Full version ++ */
-@media screen and (min-width: 1px) {
+@media screen and (max-width: 414px) {
     .container-dresscode {
-        background-color: green;
+        height: 300px;
+        position: relative;
+        margin-top: 90px;
+        text-align: center;
+    }
+
+    .container-dresscode h1 {
+        font-family: serif;
+        text-align: center;
+        font-size: 2.4em;
+        color: #34312b;
+    }
+
+    .container-dresscode p {
+        font-family: serif;
+        font-size: 1.2em;
+        margin: 10px 6px;
+        text-align: center;
+        color: #ffffff;
+        line-height: 140%;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .color_bar {
+        text-align: center;
+    }
+    .color-box {
+        display: inline-block;
+        margin: 4px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #efefef;
+    }
+    .color-box-circle {
+        border-radius: 50%;
+    }
+}
+
+@media screen and (min-width: 415px) {
+    .container-dresscode {
         height: 300px;
         position: relative;
         margin-top: 90px;
@@ -1010,15 +1143,17 @@
 }
 /* ---------------------------------------------- INVITATION --------------------------------------------------*/
 @media screen and (max-width: 414px) {
-    .invitation {
+.invitation {
         align-items: center;
         text-align: center;
+        height: auto;
+        width: 100%;
     }
 
     .invitation h1 {
         font-family: serif;
         text-align: center;
-        font-size: 2.7em;
+        font-size: 2.4em;
         color: #34312b;
     }
 
@@ -1031,7 +1166,7 @@
         overflow: hidden;
         overflow-x: hidden;
         width: 100%;
-        height: 860px;
+        height: 740px;
     }
 
     .wrapper_inv .content {
@@ -1050,34 +1185,21 @@
         font-weight: 400;
     }
 
-    .ddd {
-        position: relative;
-        margin-top: 60px;
-    }
-
-    .ddd img {
+    .ddd .im {
+        height: 270px;
+        width:auto;
         border: 4px solid white;
-    }
-
-    .phrase {
         position: relative;
-        margin-top: 45px;
-        height: auto;
-    }
-
-    .phrase h4 {
-        font-family: serif;
-        text-align: center;
-        font-size: 1.7em;
-        color: #34312b;
-        font-style: italic;
+        top: 5.8em;
     }
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 415px) {
     .invitation {
         align-items: center;
         text-align: center;
+        height: auto;
+        width: 100%;
     }
 
     .invitation h1 {
@@ -1115,15 +1237,18 @@
         font-weight: 400;
     }
 
-    .ddd {
-        position: relative;
-        margin-top: 60px;
-    }
-
-    .ddd img {
+    .ddd .im {
+        height: 450px;
+        width:auto;
         border: 4px solid white;
+        position: relative;
+        top: 5.8em;
     }
+}
 
+
+
+@media screen and (min-width: 415px) {
     .phrase {
         position: relative;
         margin-top: 45px;
@@ -1134,6 +1259,22 @@
         font-family: serif;
         text-align: center;
         font-size: 1.7em;
+        color: #34312b;
+        font-style: italic;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .phrase {
+        position: relative;
+        margin-top: 45px;
+        height: auto;
+    }
+
+    .phrase h4 {
+        font-family: serif;
+        text-align: center;
+        font-size: 1.4em;
         color: #34312b;
         font-style: italic;
     }
