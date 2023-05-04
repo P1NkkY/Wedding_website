@@ -13,7 +13,7 @@
     }
 }
 /* Для компьютера */
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 415px) {
     .main_page{
         background-image:url("../img/IMG_1.jpg");
         background-position: center center;
@@ -25,14 +25,6 @@
         height: 3680px;
         zoom: 1;
     }
-}
-
-.main_page .IMAGE_PNG {
-    position: absolute;
-    top: 1970px;
-    left: 57%;
-    height: 900px;
-    width: auto;
 }
 
 /* ++++++++++++++++++++++++++++++++ MAIN MENU ++++++++++++++++++++++++++++++++ */
@@ -1186,7 +1178,7 @@
     }
 
     .ddd .im {
-        height: 270px;
+        height: 260px;
         width:auto;
         border: 4px solid white;
         position: relative;
@@ -1245,7 +1237,6 @@
         top: 5.8em;
     }
 }
-
 
 
 @media screen and (min-width: 415px) {
